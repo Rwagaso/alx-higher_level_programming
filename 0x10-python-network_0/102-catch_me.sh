@@ -1,3 +1,3 @@
 #!/bin/bash
-# script that was a fun effort in breaking to http protocols on holberton servers
-curl -s -L -X PUT -d "user_id=98" -H "Origin: HolbertonSchool" 0.0.0.0:5000/catch_me
+# PUT METHOD is allowed, we must follow redirections, we should come from HolbertonSchool and our userid should be user_id = 98
+curl -sLX PUT -H "origin:School" -d "user_id=98" 0.0.0.0:5000/catch_me
